@@ -1,0 +1,47 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package analyzenumbers;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Nya
+ */
+public class AnalyzeNumbers {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+    Scanner input = new Scanner(System.in);
+//java.util.Scanner input = new java.util.Scanner(System.in); 
+/**    Scanner input = new Scanner(System.in); */
+    System.out.print("Enter the number of items: ");
+    int n = input.nextInt();
+    double[] numbers = new double[n];
+    double sum = 0;
+    
+    System.out.print("Enter the numbers: ");
+    for (int i = 0; i < n; i++) {
+        numbers[i] = input.nextDouble();
+        sum += numbers[i];
+    }
+    
+    double average = sum / n;
+    
+    int count = 0; //The number of elemnts above average 
+    for (int i = 0; i < n; i++)
+        if (numbers[i] > average)
+            count++;
+    
+    System.out.println("Average is " + average);
+    System.out.println("Number of elements above the average is " + count);
+    }
+  }
+    
+
